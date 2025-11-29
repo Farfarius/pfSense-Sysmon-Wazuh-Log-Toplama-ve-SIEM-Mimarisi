@@ -214,7 +214,8 @@ Bu, SIEM'in kalbidir ve gerçek zamanlı tehdit tespitini kanıtlar.
 
 *Gösterilen Yetkinlik: Olay Önceliklendirme, Gerçek Zamanlı İzleme, Kural Mantığını Anlama.
 
-<img width="1052" height="806" alt="image" src="https://github.com/user-attachments/assets/1e828fbc-2661-4af9-b3ff-41fd1ddb7558" />
+<img width="743" height="508" alt="image" src="https://github.com/user-attachments/assets/377a9c34-f44b-4c01-b7d0-85202c7ee930" />
+
 
 *5.2. MITRE ATT&CK Modülü*
 
