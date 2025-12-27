@@ -4,7 +4,7 @@ Bu proje, farklı işletim sistemlerinden gelen logların pfSense ile yönetilen
 <img width="656" height="604" alt="image" src="https://github.com/user-attachments/assets/476902bd-7961-4e70-a85a-85ce2487c065" />
 
 
-🎯 **Proje Amaçları**
+**Proje Amaçları**
 
 Gerçek bir SOC ortamında kullanılan log akışını simüle etmek
 
@@ -28,7 +28,7 @@ SIEM üzerinde korelasyon, alerting ve temel tehdit avcılığı pratiği kazanm
 
 ⚙️ **Kurulum Adımları**
 
-1️⃣ 🌐 **pfSense Kurulumu ve Ağ Sertleştirmesi**
+**1️- pfSense Kurulumu ve Ağ Sertleştirmesi**
 
 Bu projede, güvenli ve yönetilebilir bir izleme ortamı oluşturmak amacıyla ağ katmanını pfSense ile yönettim ve sertleştirdim. pfSense kullanımı, sadece temel yönlendirmenin ötesinde, ağ trafiği kontrolü ve güvenlik politikaları oluşturma yetkinliğimi göstermektedir.
 
@@ -52,7 +52,7 @@ Amaç: Wazuh Manager (Ubuntu) ve Windows/Ubuntu Agent makinelerinin IP adresleri
 
 Uygulama: Her Agent ve Manager sunucusu için, MAC adreslerini kullanarak pfSense DHCP sunucusu üzerinde kalıcı IP adresleri (192.168.1.100, vb.) tanımladım. Bu, makinelerin IP'yi dinamik olarak alsalar bile, her zaman aynı sabit IP'ye sahip olmasını garanti etti. Bu yöntem, Agent'ların yeniden başlatılması durumunda bile SIEM loglarında veri tutarsızlığını önledi.
 
-**2. Güvenlik Duvarı Kuralları (Firewall Rules)**
+*2. Güvenlik Duvarı Kuralları (Firewall Rules)*
 
 Ağ katmanında en az ayrıcalık (Least Privilege) prensibini uygulayarak, sadece zorunlu trafiğe izin veren katı kurallar oluşturdum.
 
@@ -72,7 +72,7 @@ Bu yapılandırma, Agent-Manager arasındaki iletişimin güvenliğini sağlarke
 
 
 
-**2️⃣ 🛡️ Wazuh Server Kurulumu ve Hazırlık**
+**2️- Wazuh Server Kurulumu ve Hazırlık**
 Bu aşamada, tüm logların toplandığı, analiz edildiği ve uyarıların üretildiği merkezi SIEM platformu olan Wazuh Manager ve kullanıcı arayüzü olan Wazuh Dashboard'u kurdum ve operasyonel hale getirdim. Kurulumlar, Wazuh'un resmi belgeleri takip edilerek Ubuntu Server üzerinde gerçekleştirildi.
 
 *2.1. Wazuh Manager ve Dashboard Kurulumu*
@@ -121,7 +121,7 @@ Bu sayede, pfSense'te açılan kurala ek olarak Manager'ın kendisinde de bu por
 
 
 
-**3️⃣ Windows Sysmon Entegrasyonu ve Derin Uç Nokta Görünürlüğü**
+**3️- Windows Sysmon Entegrasyonu ve Derin Uç Nokta Görünürlüğü**
 
 Projemin kilit noktası, standart Windows olay günlüklerinin ötesine geçerek uç nokta seviyesinde derinlemesine güvenlik görünürlüğü sağlamaktır. Bu amaçla, Windows Server 2022 Agent makinesine Microsoft Sysmon (System Monitor) uygulamasını entegre ettim.
 
@@ -160,7 +160,7 @@ Sysmon loglarının anlamlı uyarılara dönüşebilmesi için, Wazuh Manager'ı
 
 Bu Event ID'lere odaklanmak, zararlı yazılım yürütme zincirini, yanal hareketleri ve veri sızdırma adımlarını gerçek zamanlı olarak izleme yeteneğimi kanıtladı. Proje, uç nokta güvenliğinde proaktif izleme ve tehdit avcılığı (Threat Hunting) yeteneklerimi önemli ölçüde artırmıştır.
 
-**4️⃣Ubuntu Agent Kurulumu ve Linux Log Entegrasyonu**
+**4️- Ubuntu Agent Kurulumu ve Linux Log Entegrasyonu**
 
 Bu aşamada, izole ağdaki Ubuntu sunucuyu, Wazuh Agent aracılığıyla Manager'a bağladım. Bu, Windows uç noktadan farklı olarak, Linux işletim sisteminin çekirdek günlüklerini ve kritik servis kayıtlarını merkezi olarak izlememi sağladı.
 
@@ -207,7 +207,7 @@ Gösterilen Yetkinlik: Agent İzleme ve Sorun Giderme (Troubleshooting), Sürekl
 
 
 
-**5️⃣Wazuh Dashboard İncelemeleri (Analiz ve Korelasyon)**
+**5️- Wazuh Dashboard İncelemeleri (Analiz ve Korelasyon)**
 
 Bu bölümde, kurulan altyapının ürettiği veriyi nasıl işlediğimi, uluslararası güvenlik standartlarına göre nasıl değerlendirdiğimi ve olası tehditleri nasıl analiz ettiğimi gösteriyorum.
 
@@ -263,7 +263,7 @@ Gösterilen Yetkinlik: Kural Geliştirme, Log İşleme Boru Hattı (Pipeline) Bi
 <img width="1410" height="418" alt="image" src="https://github.com/user-attachments/assets/3cc07935-78d6-4879-8795-12f5e5941b9c" />
 
 
-📝 Sonuç
+Sonuç
 Bu proje, bir SOC ortamındaki temel bileşenleri barındıran, hem ağ hem endpoint hem de SIEM düzeyinde pratik kazandıran bir yapıdır.
 Genişletilebilirliği sayesinde ileride:
 *Malware testleri
